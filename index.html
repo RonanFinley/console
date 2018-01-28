@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CONSOLE</title>
+    <script src="master.js"></script>
+    <script src="applications.js"></script>
+    <script src="" id="execute" async></script>
+</head>
+<body>
+    <pre id="body">
+InCode Labs Command Line BETA (Creative Commons)
+Type "help" for a list of commands.
+------------------------------------------------
+
+    </pre>
+    <p><pre id="notice" style="font-size:8px;"></pre><input value="ENTER COMMAND" id="command"/><button onclick="call(input.value);input.focus();">Submit</button></p>
+</body>
+</html>
+
+<script>
+	var notice = document.getElementById("notice");			//this is mainly for programs that require input.
+    var input = document.getElementById("command");         //change "command" to the variable that holds the input ID
+    var output = document.getElementById("body");           //change "body" to the output tag. This is reccomended to be a <pre> tag.
+    var enter = document.getElementById("submit");          //change "submit" to the send command button, that is usually located right next to the command line.
+    var execute = document.getElementById("execute");       //where scripts are executed within the command line. This must go to the src of a script tag.
+</script>
